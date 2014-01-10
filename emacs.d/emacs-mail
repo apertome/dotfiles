@@ -1,0 +1,9 @@
+(load "~mj82/.emacs.d/post.el")
+(setq
+     auto-mode-alist
+     ( cons '("/tmp/mutt.*$" . post-mode) auto-mode-alist )
+)
+(add-hook 'mail-mode-hook 'turn-on-auto-fill)
+
+;; Mutt support.
+; (setq auto-mode-alist (append '(("/tmp/mutt.*" . mail-mode)) auto-mode-alist))

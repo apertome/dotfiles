@@ -1,0 +1,17 @@
+bind index G imap-fetch-mail              # Use G to fetch imap messages
+
+bind pager m    "change-folder"           # open a different folder
+bind pager c    "mail"                    # compose a new mail message
+
+bind index m    "change-folder"           # open a different folder
+bind index c    "mail"                    # compose a new mail message
+
+#Sidebar Navigation
+bind index \CP  sidebar-prev              
+bind index \CN  sidebar-next
+bind index \CO  sidebar-open
+bind pager \CP  sidebar-prev
+bind pager \CN  sidebar-next
+bind pager \CO  sidebar-open
+macro index b   '<enter-command>toggle sidebar_visible<enter><refresh>'
+macro pager b   '<enter-command>toggle sidebar_visible<enter><redraw-screen>'

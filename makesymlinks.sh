@@ -8,7 +8,7 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="emacs tmux.conf emacs.d"    # list of files/folders to symlink in homedir
+files="emacs tmux.conf emacs.d muttrc mutt"    # list of files/folders to symlink in homedir
 
 ##########
 

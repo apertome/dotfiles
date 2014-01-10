@@ -1,0 +1,69 @@
+# Get account/mailbox info
+source ~/.dotfiles-private/.mutt/mailboxes
+
+# Get keybindings
+source ~/.mutt/keybindings
+
+# Check mail every 15 seconds
+set mail_check=15
+
+# Notify about new mail every 10 seconds
+set timeout=10
+
+# Use emacs
+set editor="emacs -nw --no-init-file --load ~mj82/.emacs.d/emacs-mail +7:0"
+
+# Use an smtp server
+#set smtp_url="smtp://username@server.com:587/"
+#set smtp_pass=""
+
+##### Sidebar Setup
+
+# set up the sidebar, default not visible
+set sidebar_width=30
+set sidebar_visible=yes
+set sidebar_delim='|'
+#set sidebar_sort=yes
+# which mailboxes to list in the sidebar
+mailboxes =INBOX ="INBOX.Sent Items" ="INBOX.Trash"
+
+# color of folders with new mail
+color sidebar_new yellow default
+
+# don't prompt to purge messages on exit
+# set delete=no
+
+# Don't want any wrap markers.
+set nomarkers
+
+# Enable threading
+set sort=threads
+#set sort_aux=date
+
+# Stuff for viewing html e-mails
+set mailcap_path = ~/.mutt/mailcap
+auto_view text/html
+alternative_order text/plain text/html
+
+# Use the Solarized color scheme
+# uncomment the colorscheme you want to use, and comment out the others
+source ~/.mutt/mutt-colors-solarized/mutt-colors-solarized-dark-16.muttrc
+#source ~/.mutt/mutt-colors-solarized/mutt-colors-solarized-light-16.muttrc
+#source ~/.mutt/mutt-colors-solarized/mutt-colors-solarized-dark-256.muttrc
+#source ~/.mutt/mutt-colors-solarized/mutt-colors-solarized-light-256.muttrc
+
+#make mutt colorful!
+#color attachment brightmagenta default
+#color error      brightred    default
+#color hdrdefault red          default
+#color indicator  brightyellow red
+#color markers    brightcyan   default
+#color message    brightcyan   default
+#color normal     default      default
+#color quoted     brightblue   default
+#color search     default      green
+#color signature  red          default
+#color status     yellow       blue
+#color tilde      magenta      default
+#color tree       magenta      default
+
