@@ -57,3 +57,16 @@ the current position of point, then move it to the beginning of the line."
 (eval-after-load "perl-mode"
      '(define-key perl-mode-map (kbd "C-a") 'smart-line-beginning))
 
+;; Add goto-line keyboard shortcut (M-g)
+(define-key global-map (kbd "M-g") 'goto-line)
+
+;; change backup location
+(setq backup-directory-alist `(("." . "~/.saves")))
+
+;; Put autosave files (ie #foo#) and backup files (ie foo~) in ~/.emacs.d/.
+(custom-set-variables
+  '(auto-save-file-name-transforms '((".*" "~/.saves/\\1" t)))
+  '(backup-directory-alist '((".*" . "~/.saves/"))))
+
+;; create the autosave dir if necessary, since emacs won't.
+(make-directory "~/.saves/" t)
