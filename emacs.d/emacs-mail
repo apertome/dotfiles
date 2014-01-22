@@ -3,7 +3,37 @@
      auto-mode-alist
      ( cons '("/tmp/mutt.*$" . post-mode) auto-mode-alist )
 )
-(add-hook 'mail-mode-hook 'turn-on-auto-fill)
+;(add-hook 'mail-mode-hook 'turn-off-auto-fill)
+
+(add-hook 'post-mode-hook 'turn-off-auto-fill)
 
 ;; Mutt support.
 ; (setq auto-mode-alist (append '(("/tmp/mutt.*" . mail-mode)) auto-mode-alist))
+
+;(defun harden-newlines ()
+;  (save-excursion
+;    (goto-char (point-min))
+;    (while (search-forward "\n" nil t)
+;      (put-text-property (1- (point)) (point) 'hard t))))
+
+;(setq fill-flowed-display-column nil)
+
+;(add-hook 'message-setup-hook
+;  (lambda ()
+;    (when message-this-is-mail
+;      (turn-off-auto-fill)
+;      (setq
+;      truncate-lines nil
+;      word-wrap t
+;      use-hard-newlines t))))
+
+;(add-hook 'message-send-hook
+;  (lambda ()
+;    (when use-hard-newlines
+;      (harden-newlines))))
+
+;(add-hook 'gnus-article-mode-hook
+;  (lambda ()
+;    (setq
+;      truncate-lines nil
+;      word-wrap t)))
