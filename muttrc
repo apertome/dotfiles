@@ -13,6 +13,9 @@ set timeout=10
 # Use emacs
 set editor="emacs -nw --no-init-file --load ~mj82/.emacs.d/emacs-mail +7:0"
 
+# Use format=flowed text
+set text_flowed=yes
+
 # Use an smtp server
 #set smtp_url="smtp://username@server.com:587/"
 #set smtp_pass=""
