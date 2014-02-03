@@ -15,3 +15,6 @@ bind pager \CN  sidebar-next
 bind pager \CO  sidebar-open
 macro index b   '<enter-command>toggle sidebar_visible<enter><refresh>'
 macro pager b   '<enter-command>toggle sidebar_visible<enter><redraw-screen>'
+
+# purge messages bypassing trash
+#bind index X  "purge-message"
