@@ -4,11 +4,23 @@ source ~/.dotfiles-private/.mutt/mailboxes
 # Get keybindings
 source ~/.mutt/keybindings
 
+# Get crypto
+source ~/.mutt/crypto
+
+
 # Check mail every 15 seconds
 set mail_check=15
 
 # Notify about new mail every 10 seconds
 set timeout=10
+
+# filters new messages through a shell script that automatically generates a mutt alias for new senders
+set display_filter=$HOME/.mutt/add_alias_filter.sh 
+set alias_file= ~/.mutt/aliases.txt
+source $alias_file
+
+# do not ask for to, subject,... when replying.
+set fast_reply
 
 # Use emacs
 set editor="emacs -nw --no-init-file --load ~mj82/.emacs.d/emacs-mail +7:0"
