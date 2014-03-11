@@ -23,7 +23,9 @@ source $alias_file
 set fast_reply
 
 # Use emacs
-set editor="emacs -nw --no-init-file --load ~mj82/.emacs.d/emacs-mail +7:0"
+#set editor="emacs -nw --no-init-file --load ~mj82/.emacs.d/emacs-mail +7:0"
+set edit_headers
+set editor="vim +':set textwidth=0' +':set wrapmargin=0' +':set wrap' +/^$ ++1"
 
 # Use format=flowed text
 set text_flowed=yes

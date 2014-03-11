@@ -1,3 +1,5 @@
+syntax on
+filetype plugin indent on
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
@@ -13,3 +15,5 @@ set softtabstop=4
 
 set pastetoggle=<F10>
 
+" set up syntax highlighting for my e-mail
+au BufRead,BufNewFile .followup,.article,.letter,/tmp/pico*,nn.*,snd.*,/tmp/mutt* :set ft=mail 

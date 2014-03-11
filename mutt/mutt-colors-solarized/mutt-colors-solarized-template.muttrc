@@ -54,12 +54,13 @@ color index         J_orange        J_bg            "~E"                        
 color index         J_blue          J_bg            "~N"                        # new messages
 color index         J_blue          J_bg            "~O"                        # old messages
 color index         J_violet        J_bg            "~Q"                        # messages that have been replied to
+color index         J_blue          J_bg            "~p!~F"                     # messages to me
 color index         J_base01        J_bg            "~R"                        # read messages
 color index         J_blue          J_bg            "~U"                        # unread messages
 color index         J_blue          J_bg            "~U~$"                      # unread, unreferenced messages
 color index         J_base00        J_bg            "~v"                        # messages part of a collapsed thread
 color index         J_base00        J_bg            "~P"                        # messages from me
-color index         J_cyan          J_bg            "~p!~F"                     # messages to me
+#color index         J_blue          J_bg            "~p!~F"                     # messages to me
 color index         J_cyan          J_bg            "~N~p!~F"                   # new messages to me
 color index         J_cyan          J_bg            "~U~p!~F"                   # unread messages to me
 color index         J_base01        J_bg            "~R~p!~F"                   # messages to me
