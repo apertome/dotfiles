@@ -7,7 +7,6 @@ source ~/.mutt/keybindings
 # Get crypto
 source ~/.mutt/crypto
 
-
 # Check mail every 15 seconds
 set mail_check=15
 
@@ -30,9 +29,13 @@ set editor="vim +':set textwidth=0' +':set wrapmargin=0' +':set wrap' +/^$ ++1"
 # Use format=flowed text
 set text_flowed=yes
 
+set pager_stop      # don't go to next message at end of message
+
 # Use an smtp server
 #set smtp_url="smtp://username@server.com:587/"
 #set smtp_pass=""
+#set smtp_url=smtps://$imap_user:$imap_pass@mx.grnoc.iu.edu:587/
+#set ssl_force_tls = yes
 
 ##### Sidebar Setup
 
@@ -65,6 +68,7 @@ alternative_order text/plain text/html
 # Use the Solarized color scheme
 # uncomment the colorscheme you want to use, and comment out the others
 source ~/.mutt/mutt-colors-solarized/mutt-colors-solarized-dark-16.muttrc
+
 #source ~/.mutt/mutt-colors-solarized/mutt-colors-solarized-light-16.muttrc
 #source ~/.mutt/mutt-colors-solarized/mutt-colors-solarized-dark-256.muttrc
 #source ~/.mutt/mutt-colors-solarized/mutt-colors-solarized-light-256.muttrc
