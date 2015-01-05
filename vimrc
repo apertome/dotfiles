@@ -24,11 +24,23 @@ au BufRead,BufNewFile *.xml.example set filetype=xml
 " Ctrl-j/k deletes blank line below/above, and Alt-j/k inserts.
 nnoremap <silent><C-j> m`:silent +g/\m^\s*$/d<CR>``:noh<CR>
 nnoremap <silent><C-k> m`:silent -g/\m^\s*$/d<CR>``:noh<CR>
-nnoremap <silent>∆ :set paste<CR>m`o<Esc>``:set nopaste<CR>
-nnoremap <silent>˚ :set paste<CR>m`O<Esc>``:set nopaste<CR>
-"nnoremap <silent><A-j> :set paste<CR>m`o<Esc>``:set nopaste<CR>
-"nnoremap <silent><A-k> :set paste<CR>m`O<Esc>``:set nopaste<CR>
+"nnoremap <silent>Ô :set paste<CR>m`o<Esc>``:set nopaste<CR>
+"nnoremap <silent> :set paste<CR>m`O<Esc>``:set nopaste<CR>
+"nnoremap <silent>∆ :set paste<CR>m`o<Esc>``:set nopaste<CR>
+"nnoremap <silent>˚ :set paste<CR>m`O<Esc>``:set nopaste<CR>
+"nnoremap <silent><AS-J> :set paste<CR>m`o<Esc>``:set nopaste<CR>
+"nnoremap <silent><AS-k> :set paste<CR>m`O<Esc>``:set nopaste<CR>
+nnoremap <silent>J :set paste<CR>m`o<Esc>``:set nopaste<CR>
+nnoremap <silent>K :set paste<CR>m`O<Esc>``:set nopaste<CR>
+"unmap <A-j>
+"unmap <A-k>
 
 " find the MacOS Alt key
 " Alt-j: ∆
 " Alt-k: ˚
+" Alt-shift-j: Ô
+" Alt-shift-k: 
+"
+" Alt-shift-j (after changing iterm2 setting): J
+" Alt-shift-k (after changing iterm2 setting): K
+" To find it enter insert mode and hit Control-v followed by the key
