@@ -1,0 +1,5 @@
+#!/bin/bash
+mkdir -p ~/.dotfiles-private/.tmux
+cp ~/dotfiles/tmux/tmux-colors.conf ~/.dotfiles-private/.tmux
+vim ~/.dotfiles-private/.tmux/tmux-colors.conf
+
