@@ -1,0 +1,28 @@
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+# User specific aliases and functions
+alias manfiles="find . \( ! -regex '.*/\..*' \) -type f -or -type l | sed -e s/^.// -e /^$/d"
+alias ls='ls --color=auto -h'
+alias l.='ls .*'
+alias ll='ls -l'
+alias dl='wget -m -l 1 -np -nd -e robots=off'
+function vdiff() { svn diff "$@" | vim -R -; }
+function sstat() { svn diff "$@" | diffstat; } 
+function gdiff() { git diff "$@" | vim -R -; }
+function gstat() { git diff "$@" | diffstat; } 
+function cleanupmac() {
+    find . -name "._*" | xargs rm 
+    find . -name ".DS_Store" | xargs rm
+}
+
+bind '"\e\e[D":backward-word'
+bind '"\e\e[C":forward-word'
+
+PS1='[\t \u@\h \W]$ '
+
+
