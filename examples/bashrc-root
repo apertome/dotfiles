@@ -1,0 +1,20 @@
+# .bashrc
+
+# User specific aliases and functions
+
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+alias trunc="/usr/bin/truncate -s 0 /var/log/httpd/error_log && /usr/bin/truncate -s 0 /var/log/httpd/ssl_error_log"
+alias err="tail -f /var/log/httpd/error_log"
+alias lerr="less /var/log/httpd/error_log"
+alias ssl="tail -f /var/log/httpd/ssl_error_log"
+alias lssl="less/var/log/httpd/ssl_error_log"
+alias res="/etc/init.d/httpd restart"
+alias msg="tail -f /var/log/messages"
+alias lmsg="less /var/log/messages"
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
