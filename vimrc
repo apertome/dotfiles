@@ -15,6 +15,10 @@ set softtabstop=4
 
 set pastetoggle=<F10>
 
+" set backupcopy to allow webpack --watch to work
+" http://stackoverflow.com/questions/26708205/webpack-watch-isnt-compiling-changed-files/28610124
+set backupcopy=yes
+
 " set up syntax highlighting for my e-mail
 au BufRead,BufNewFile .followup,.article,.letter,/tmp/pico*,nn.*,snd.*,/tmp/mutt* :set ft=mail 
 
