@@ -15,6 +15,10 @@ set softtabstop=4
 
 set pastetoggle=<F10>
 
+" set backupcopy to allow webpack --watch to work
+" http://stackoverflow.com/questions/26708205/webpack-watch-isnt-compiling-changed-files/28610124
+set backupcopy=yes
+
 " set up syntax highlighting for my e-mail
 au BufRead,BufNewFile .followup,.article,.letter,/tmp/pico*,nn.*,snd.*,/tmp/mutt* :set ft=mail 
 
@@ -35,6 +39,9 @@ nnoremap <silent>K :set paste<CR>m`O<Esc>``:set nopaste<CR>
 "unmap <A-j>
 "unmap <A-k>
 
+" map \q to 'close buffer'
+map <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>
+
 " find the MacOS Alt key
 " Alt-j: ∆
 " Alt-k: ˚
@@ -44,3 +51,32 @@ nnoremap <silent>K :set paste<CR>m`O<Esc>``:set nopaste<CR>
 " Alt-shift-j (after changing iterm2 setting): J
 " Alt-shift-k (after changing iterm2 setting): K
 " To find it enter insert mode and hit Control-v followed by the key
+
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=11 guibg=11
+
+
+" Highlight ExtraWhitespace
+highlight ExtraWhitespace ctermbg=11 guibg=11
+
+"match ExtraWhitespace /^\s* \s*\|\s\+$/
+match ExtraWhitespace /\s\+$/
+"match ExtraWhitespace /\s\+$\| \+\ze\t/
+"match ExtraWhitespace /[^\t]\zs\t\+/
+
+" Show trailing whitespace:
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+
+" Show trailing whitespace and spaces before a tab:
+"autocmd BufWinEnter * match ExtraWhitespace /\s\+$\| \+\ze\t/
+
+" Show tabs that are not at the start of a line:
+"autocmd BufWinEnter * match ExtraWhitespace /[^\t]\zs\t\+/
+
+" Show spaces used for indenting (so you use only tabs for indenting).
+":match ExtraWhitespace /^\t*\zs \+/
+
+" Switch off :match highlighting.
+":match
+
+"Remove trailing whitespace on the current line by pressing F5
+nnoremap <F5> :let _s=@/<Bar>:s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
