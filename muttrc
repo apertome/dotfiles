@@ -42,7 +42,7 @@ set pager_stop      # don't go to next message at end of message
 # set up the sidebar, default not visible
 set sidebar_width=25
 set sidebar_visible=yes
-set sidebar_delim='|'
+#set sidebar_delim_chars='|'
 #set sidebar_sort=yes
 # which mailboxes to list in the sidebar
 mailboxes =INBOX ="INBOX.Sent Items" ="INBOX.Trash"
@@ -51,7 +51,9 @@ mailboxes =INBOX ="INBOX.Sent Items" ="INBOX.Trash"
 color sidebar_new yellow default
 
 # prevent sidebar from being truncated
-set sidebar_shortpath = yes
+#set sidebar_short_path = yes
+
+set sidebar_format = "%B%*  %N "
 
 # don't prompt to purge messages on exit
 # set delete=no
