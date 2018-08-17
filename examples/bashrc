@@ -12,9 +12,10 @@ alias l.='ls .*'
 alias ll='ls -l'
 alias dl='wget -m -l 1 -np -nd -e robots=off'
 function vdiff() { svn diff "$@" | vim -R -; }
-function sstat() { svn diff "$@" | diffstat; } 
+function sstat() { svn diff "$@" | diffstat; }
 function gdiff() { git diff "$@" | vim -R -; }
-function gstat() { git diff "$@" | diffstat; } 
+function gstat() { git diff "$@" | diffstat; }
+function jc() { jq . "$@" -C | less -R -; }
 function cleanupmac() {
     find . -name "._*" | xargs rm 
     find . -name ".DS_Store" | xargs rm
